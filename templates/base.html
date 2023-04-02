@@ -23,8 +23,7 @@
             <a href="{% url 'marketplace:home' %}" class="mr-5 hover:text-gray-900 ">Home</a>
             <a href="{% url 'marketplace:about-us' %}" class="mr-5 hover:text-gray-900 ">About Us</a>
             <a href="#" class="mr-5 hover:text-gray-900 ">Best Sellers</a>
-            <a href="#" class="mr-5 hover:text-gray-900 ">New Item</a>
-            <a href="#" class="mr-5 hover:text-gray-900">Browse</a>
+            <a href="{% url 'item:add-item' %}" class="mr-5 hover:text-gray-900 ">New Item</a>
             <a href="{% url 'marketplace:contact-us' %}" class="mr-5 hover:text-gray-900">Contact Us</a>
           </nav>
           {% if request.user.is_authenticated %}

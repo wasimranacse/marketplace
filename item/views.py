@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404
+from django.contrib.auth.decorators import login_required
 
 from .models import Item
+from .forms import NewItemForm
 
 def detailView(request, pk):
     item = get_object_or_404(Item, pk=pk)
@@ -16,3 +18,10 @@ def detailView(request, pk):
         'related_items': related_items,
     })
 
+@login_required
+def addNewItem(request):
+    form = NewItemForm()
+    return render(request, 'item/form.html',{
+        'form': form,
+        'title': 'Add New Item',
+    })

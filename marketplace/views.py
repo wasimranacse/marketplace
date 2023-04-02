@@ -32,6 +32,3 @@ def signUp(request):
         'form': form
     })
 
-
-# https://youtu.be/ZxMB6Njs3ck?t=4558
-
