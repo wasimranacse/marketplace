@@ -32,6 +32,3 @@ class NewItemForm(forms.ModelForm):
                 'class': INPUT_CLASSES,
             }),
         }
-
-# https://youtu.be/ZxMB6Njs3ck?t=5067
-
